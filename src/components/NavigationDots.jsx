@@ -3,7 +3,7 @@ import React from "react";
 import "./NavigationDots.scss";
 
 const NavigationDots = ({ active }) => {
-  const sections = ["home", "about", "projects", "skills", "contact"];
+  const sections = ["home", "about", "skills", "projects", "contact"];
 
   return (
     <>
