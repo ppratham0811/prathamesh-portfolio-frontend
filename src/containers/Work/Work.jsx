@@ -37,9 +37,9 @@ const Work = () => {
   };
   return (
     <>
-      <h2 className="head-text">
-        My <span>Projects</span>
-      </h2>
+      <motion.h2 className="head-text" whileInView={{x:[-1000,0]}} transition={{duration: 1}} viewport={{once: true}}>
+      My <span>Projects</span>
+      </motion.h2>
       <div className="app__work-filter">
         {["Web Apps", "Backend APIs", "AI/ML", "All"].map((item, index) => {
           return (
@@ -58,7 +58,9 @@ const Work = () => {
 
       <motion.div
         animate={animateCard}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        whileInView={{opacity: [0,1]}}
+        transition={{ duration: 1, delayChildren: 0.5 }}
+        viewPort={{once: true}}
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => {
