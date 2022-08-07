@@ -7,6 +7,7 @@ import {
   Footer,
   Skills,
   Work,
+  Contact
 } from "./containers";
 import "./App.scss";
 
@@ -16,8 +17,9 @@ const App = () => {
       <Navbar />
       <Header />
       <About />
-      <Work />
       <Skills />
+      <Work />
+      <Contact />
       <Footer />
     </div>
   );
