@@ -1,0 +1,10 @@
+.app__footer-sticky {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lightGray-color);
+  padding: 5px 4px;
+  z-index: 20;
+}
