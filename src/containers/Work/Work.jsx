@@ -58,9 +58,8 @@ const Work = () => {
 
       <motion.div
         animate={animateCard}
-        whileInView={{opacity: [0,1]}}
-        transition={{ duration: 1, delayChildren: 0.5 }}
-        viewPort={{once: true}}
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        viewport={{once: true}}
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => {
@@ -98,4 +97,4 @@ const Work = () => {
 };
 
 // export default Work;
-export default AppWrapper(Work, "projects");
+export default AppWrapper(Work, "projects", 'app__whitebg');
