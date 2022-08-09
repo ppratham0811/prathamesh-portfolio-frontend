@@ -14,7 +14,7 @@ const NavigationDots = ({ active }) => {
               className="app__navigation-dot"
               key={section + index}
               href={`#${section}`}
-              style={active === section ? { backgroundColor: "#313BAC" } : {}}
+              style={active === section ? { backgroundColor: "var(--secondary-color)" } : {}}
             />
           );
         })}
