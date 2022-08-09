@@ -21,7 +21,7 @@ const About = () => {
       </motion.div>
       <motion.div className="app__about-desc" whileInView={{opacity:[0,1]}} transition={{duration: 1}} viewport={{once: true}}>
         <h3 style={{marginBottom: 10}}>Who I am?</h3>
-        <p className="p-text">I am a B. Tech student at Vellore Institute of Technology, Chennai. I am pursuing Computer science and engineering with specialization in AI and ML. I love doing web development. I spend my time on learning, doing projects and Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum exercitationem iste voluptas. Voluptate quos nesciunt quidem recusandae qui. Error, quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta rem suscipit et omnis ab est molestias sit quis labore. Asperiores hic exercitationem, accusamus veniam aliquid molestias explicabo placeat. Dolor, excepturi?</p>
+        <p className="p-text">I am a B. Tech student at Vellore Institute of Technology, Chennai. I am pursuing Computer science and engineering with specialization in AI and ML. I love doing web development. I am an enthusiastic learner. I spend my time on learning more about tech and finance. I like to do projects. I have experience in web development. I always look to for solutions to problems I face. I am a problem solver, I never give up. I am also interested in startups and I would love to work for any startup as a fullstack web developer.</p>
       </motion.div>
 
       <motion.div style={{marginTop: 40}} whileInView={{x:[-1000,0]}} transition={{duration: 1}} viewport={{once: true}}>
@@ -51,5 +51,5 @@ const About = () => {
   );
 };
 
-export default AppWrapper(About, 'about');
+export default AppWrapper(About, 'about', 'app__whitebg');
 // export default About;
