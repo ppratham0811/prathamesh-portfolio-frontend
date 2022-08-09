@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .app__skills-icons {
@@ -44,5 +44,17 @@
   p{
     text-align: center;
     font-size: 0.9rem;
+  }
+}
+
+.skills-tooltip {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.skills-tooltip-p {
+  @media screen and (min-width: 769px) {
+    display: none;
   }
 }
