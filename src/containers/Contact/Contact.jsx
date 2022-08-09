@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import "./Contact.scss";
 import emailjs from "@emailjs/browser";
 
@@ -6,8 +6,6 @@ import { AppWrapper } from "../../wrapper";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const [formBtnText, setFormBtnText] = useState("Send Message 📤");
-
   const [loading, setLoading] = useState(false);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
@@ -131,7 +129,7 @@ const Contact = () => {
                 required
               ></textarea>
               <button type="submit">
-                {loading ? "Sending..." : formBtnText}
+                {loading ? "Sending..." : "Send Message 📤"}
               </button>
             </form>
           ) : (

@@ -3,7 +3,6 @@ import { NavigationDots } from "../components/";
 
 const AppWrapper = (Component, idName, classNames) =>
   function HOC() {
-    const currentYear = new Date().getFullYear();
     return (
       <>
         <div className={`app__container ${classNames}`} id={idName}>
