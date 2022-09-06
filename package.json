@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.3",
     "@sanity/client": "^3.3.2",
     "@sanity/image-url": "^1.0.1",
     "@testing-library/jest-dom": "^5.16.4",
