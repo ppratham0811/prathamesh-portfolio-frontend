@@ -9,12 +9,15 @@ import "./Skills.scss";
 const Skills = () => {
   const [skills, setSkills] = useState([]);
 
-  useEffect(() => {
+  const querySelector = async () => {
     const query = '*[_type == "skills"]';
+    const skillsQuery = await client.fetch(query);
 
-    client.fetch(query).then((data) => {
-      setSkills(data);
-    });
+    setSkills(skillsQuery);
+  };
+
+  useEffect(() => {
+    querySelector();
   }, []);
 
   return (
