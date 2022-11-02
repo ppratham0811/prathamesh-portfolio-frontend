@@ -10,7 +10,7 @@
   }
 
   .app__contact-section-first-div {
-    margin: 1rem 4rem;
+    margin: 1rem 2rem;
     p {
       margin-bottom: 8px;
     }
@@ -56,6 +56,15 @@
 
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+
+.app__contact-section {
+  @media screen and (max-width: 500px) {
+    .app__contact-section-first-div {
+      width: 100%;
+      margin: 0;
     }
   }
 }

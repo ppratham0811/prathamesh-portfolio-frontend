@@ -65,6 +65,16 @@ const Contact = () => {
           </div>
           <div>
             <p>
+              You can download my resume{" "}
+              <a
+                href="https://drive.google.com/file/d/1LC3rktVDsh1r-baF5xUmsI5L4rErfg-F/view?usp=sharing"
+                download
+              >
+                here
+              </a>.
+            </p>
+
+            <p>
               You can send a connection request to me on{" "}
               <a
                 href="https://www.linkedin.com/in/prathamesh-potabatti/"
@@ -133,7 +143,9 @@ const Contact = () => {
               </button>
             </form>
           ) : (
-            <h2 style={{marginTop: 26}}>Thank you, I will get back to you soon✌</h2>
+            <h2 style={{ marginTop: 26 }}>
+              Thank you, I will get back to you soon✌
+            </h2>
           )}
         </div>
       </motion.div>
