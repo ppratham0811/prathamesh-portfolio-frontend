@@ -5,14 +5,18 @@ import emailjs from "@emailjs/browser";
 import { AppWrapper } from "../../wrapper";
 import { motion } from "framer-motion";
 
+import { urlFor, client } from "../../Client";
+
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [resume, setresume] = useState("");
 
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE,
       templateId = process.env.REACT_APP_EMAILJS_TEMPLATE;
@@ -21,7 +25,6 @@ const Contact = () => {
       .sendForm(serviceId, templateId, form.current, "FxjtemBzB63O7q6iG")
       .then(
         (result) => {
-          setLoading(true);
           setTimeout(() => {
             setLoading(false);
             setIsFormSubmitted(true);
@@ -33,6 +36,17 @@ const Contact = () => {
         }
       );
   };
+
+  const querySelector = async () => {
+    const query = `*[_type == "resume"] {
+      title,
+      "resumeURL": resumefile.asset->url
+    }`;
+    const output = await client.fetch(query);
+    setresume(output[0].resumeURL);
+  };
+
+  querySelector();
 
   return (
     <>
@@ -53,11 +67,11 @@ const Contact = () => {
         <div className="app__contact-section-first-div">
           <div>
             <h4>Name</h4>
-            <p>Prathamesh Potabatti</p>
+            <p>Prathamesh R Potabatti</p>
           </div>
           <div>
             <h4>My Email</h4>
-            <p>ppratham0811@gmail.com</p>
+            <p>ppratham1180@gmail.com</p>
           </div>
           <div>
             <h4>My Contact No</h4>
@@ -65,13 +79,7 @@ const Contact = () => {
           </div>
           <div>
             <p>
-              You can download my resume{" "}
-              <a
-                href="https://drive.google.com/file/d/1LC3rktVDsh1r-baF5xUmsI5L4rErfg-F/view?usp=sharing"
-                download
-              >
-                here
-              </a>.
+              You can download my resume <a href={`${resume}?dl=`}>here</a>.
             </p>
 
             <p>
